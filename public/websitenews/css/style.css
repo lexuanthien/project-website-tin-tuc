@@ -299,7 +299,7 @@ li.dropdown {
 }
 
 #titlecarousel:hover {
-  color: #14abc5;
+  color: #ed3974;
 }
 
 #reading {
@@ -308,7 +308,7 @@ li.dropdown {
   letter-spacing: 1px;
 }
 #reading:hover {
-  color: #14abc5;
+  color: #ed3974;
   background-color: rgba(0,0,0,0) !important;
 }
 
@@ -327,6 +327,7 @@ li.dropdown {
 #nutlogin:hover {
   color: gold;
 }
+
 
 
 /* Master Stylesheet */

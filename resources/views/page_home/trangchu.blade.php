@@ -17,9 +17,9 @@
 
     <title>Website Tin Tức Công Nghệ Hàng Đầu - Tin Tức Mỗi Ngày</title>
 
-    <link rel="icon" href="{{ url('http://localhost:8000/websitenews/image/logo.jpg') }}">
+    <link rel="icon" href="{{ asset('websitenews/image/logo.jpg') }}">
 
-    <link rel="stylesheet" href="{{ url('http://localhost:8000/websitenews/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('websitenews/css/style.css') }}">
 
 </head>
 
@@ -33,7 +33,9 @@
             <div class="single-sidebar-widget p-30">
                 <!-- Section Title -->
                 <div class="section-heading">
+                    <a href="{{ route('moinhat') }}">
                     <h5>MỚI NHẤT</h5>
+                    </a>
                 </div>
 
                 <!-- Single Blog Post -->
@@ -145,11 +147,12 @@
                             >
                             <?php $i++; ?>
                                 <div>
-                                    <a><img id="image_carousel" src="uploads/posts/{{ $tin->image }}" alt="Los Angeles"><a>
+                                    <a><img id="image_carousel" src="uploads/posts/{{ $tin->image }}"><a>
                                 </div>
-                                <div class="carousel-caption text-left darken-pseudo darken-with-text">
+                                <div class="carousel-caption text-left">
                                     <a href="{{ route('xembaiviet', $tin->slug) }}" id= "titlecarousel">{{ $tin['title'] }}</a>
-                                    <p><a id="reading" class="btn btn-outline-light rounded-0 mt-3" href="{{ route('xembaiviet', $tin->slug) }}"  role="button">CONTINUE READING</a></p>
+                                    <a id="reading" class="btn btn-outline-light rounded-0 mt-3" href="{{ route('xembaiviet', $tin->slug) }}"  role="button">CONTINUE READING</a>
+                                    
                                 </div>
                             </div>
                             @endforeach

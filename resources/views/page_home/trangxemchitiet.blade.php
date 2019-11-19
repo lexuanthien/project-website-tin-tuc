@@ -6,7 +6,7 @@
     @include('page_home.layout.menu')
 
     <!-- PHẦN NỘI DUNG -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url('http://localhost:8000/websitenews/image/background.jpg');">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/websitenews/image/background.jpg');">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -57,42 +57,43 @@
                                     <span id="like-value">{{ $posts->likes }}</span>
                                 </span> -->
 
-                                <button style="font-size: 10px; letter-spacing: 1px;" type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i> View {{ $posts->views }}</button>
+                                <!-- <button style="font-size: 10px; letter-spacing: 1px;" type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i> View {{ $posts->views }}</button>
 
                                 <span class="btn btn-danger ml-2" style=" font-size: 10px; letter-spacing: 1px;" id="btn-like"> <i class="fa fa-thumbs-up" aria-hidden="true"></i>
 
                                     <span id="like-value"> Thích {{ $posts->likes }}</span>
-                                </span>
-
-                                <!-- <button style="font-size: 10px; letter-spacing: 1px;color:white; background-color: #4167b2;" type="button" class="btn ml-2"><i class="fas fa-share-square"></i> Chia sẻ</button>
-
-                                <div    style="font-size: 10px !important; letter-spacing: 1px;         color:white; height: 30px !important;"
-                                        class="fb-share-button ml-2" 
-                                        data-href="{{ route('xembaiviet', $posts->slug) }}" 
-                                        data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Faptech-php-20-lexuanthien%2FPROJECT%2Fwebsite-tintuccongnghe%2Fresources%2Fviews%2Fpage_home%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a>
-                                </div> -->
+                                </span> -->
                                 
-                                <!-- NÚT THÍCH VÀ CHIA SẺ FACEBOOK -->
                                 <div class="row">
-                                <div class=" col-12 fb-like mt-2" 
-                                    data-href="{{ route('xembaiviet', $posts->slug) }}" 
-                                    data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                                    <div class="col-12 fb-like" style="height:17px; font-size: 4px; letter-spacing: 1px;" 
+                                        data-href="{{ asset('xemchitiet/' . $posts->slug . '.html') }}" 
+                                        data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+                                    </div>
                                 </div>
-                                </div>
-
+                                <hr>
                             </div>
-                            <hr>
+                            
 
                             <p><b>{{ $posts->description }}</b></p>
-                            <img src="/uploads/posts/{{$posts->image}}">
+                            <img src="{{ asset('uploads/posts/' . $posts->image) }}">
                             <p>{!! $posts->content !!}</p>
 
                             <hr>
-                            <div    class="fb-like mt-2" 
-                                    data-href="{{ route('xembaiviet', $posts->slug) }}" 
-                                    data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
-                            </div>
+                            <div class="row">
+                                    <div class="col-6 fb-like" style="height:17px; font-size: 4px; letter-spacing: 1px;" 
+                                        data-href="{{ asset('xemchitiet/' . $posts->slug . '.html') }}" 
+                                        data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+                                    </div>
 
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <span class="badge badge-secondary mr-2" style="height:17px; font-size: 10px; letter-spacing: 1px;"><i class="fa fa-eye" aria-hidden="true"></i> {{ $posts->views }}</span>
+
+                                        <span class="badge badge-info"style="height:17px; font-size: 10px; letter-spacing: 1px;" id="btn-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                            <span id="like-value"> {{ $posts->likes }}</span>
+                                        </span>
+                                    </div>
+                                    
+                                </div>
                             <hr>
                         </div>
                     </div>
@@ -107,7 +108,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="single-blog-post style-4 mb-30">
                                     <div class="post-thumbnail">
-                                        <img src="/uploads/posts/{{$postlienquan->image}}">
+                                        <img src="{{ asset('uploads/posts/' . $postlienquan->image) }}">
                                     </div>
                                     <div class="post-content">
                                         <a href="{{ route('xembaiviet', $postlienquan->slug) }}" class="post-title">{{$postlienquan->title}}</a>

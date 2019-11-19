@@ -2,8 +2,8 @@
     <nav id="logoNavbar1" class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="{{ route('trangchu') }}">
-                <img id="hinhlogo" src="{{ url('http://localhost:8000/websitenews/image/inews.png') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
+                <img id="hinhlogo" src="{{ asset('websitenews/image/inews.png') }}">
             </a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>

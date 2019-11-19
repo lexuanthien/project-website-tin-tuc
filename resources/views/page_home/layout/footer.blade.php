@@ -1,9 +1,9 @@
 <div id="footer">
-        <div class="container py-4">
+        <div class="container py-3">
         <div class="row">
           <div id="footer-logo" class="d-none d-lg-block col-lg-3" style="justify-content: center; display: flex; align-items: center; flex-direction: column; text-align: center;">
                 <a id="logo" class="navbar-brand " href="#">
-                        <img src="{{ url('http://localhost:8000/websitenews/image/LOGO.png') }}" height="150px" width="150px" alt="">
+                        <img src="{{ asset('websitenews/image/LOGO.png') }}" height="150px" width="150px" alt="">
                 </a>
           </div>
           <div id="about" class="col-sm-9 col-md-6">

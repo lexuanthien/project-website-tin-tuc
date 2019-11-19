@@ -13,7 +13,7 @@
 
     <title>Đăng Ký Vào Trang Admin</title>
 
-    <link rel="stylesheet" href="{{ url('http://localhost:8000/websitenews/css/register_admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('websitenews/css/register_admin.css') }}">
 </head>
 
 <body>

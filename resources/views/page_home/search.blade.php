@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         
-    <link rel="icon" href="{{ url('http://localhost:8000/websitenews/image/logo.jpg') }}">
+    <link rel="icon" href="{{ asset('websitenews/image/logo.jpg') }}">
 
-    <link rel="stylesheet" href="{{ url('http://localhost:8000/websitenews/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('websitenews/css/style.css') }}">
   </head>
   <body id="body">
     <!--PHẦN LOGO + MENU-->  
@@ -54,7 +54,7 @@
                         <div class="single-catagory-post d-flex flex-wrap">
                             <!-- Thumbnail -->
                             <div class="post-thumbnail bg-img">
-                              <img id="image" src="/uploads/posts/{{$tin->image}}">
+                              <img id="image" src="{{ asset('uploads/posts/' . $tin->image) }}">
                             </div>
 
                             <!-- Post Contetnt -->

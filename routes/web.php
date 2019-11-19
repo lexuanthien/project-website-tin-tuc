@@ -37,10 +37,12 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'LoginPageAdmin'], function ()
 });
 
 //TRANG WEB
+Route::get('/', 'WebsiteController@TrangChu')->name('home');
+
 Route::get('trangchu', 'WebsiteController@TrangChu')->name('trangchu');
 Route::get('tintuc/{slug}.html', 'WebsiteController@TinTuc')->name('news');
 Route::get('xemchitiet/{slug}.html', 'WebsiteController@XemChiTiet')->name('xembaiviet');
-Route::get('tinmoinhat', 'WebsiteController@MoiNhat')->name('moinhat');
+Route::get('tinmoinhat.html', 'WebsiteController@MoiNhat')->name('moinhat');
 
 //ĐĂNG NHẬP WEBSITE
 Route::get('login', 'WebsiteController@getLogin')->name('login');
