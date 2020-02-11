@@ -1,20 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //ĐĂNG NHẬP TRANG ADMIN
 Route::get('admin/login', 'LoginAdminController@getLoginAdmin')->name('login.input');
 Route::post('admin/login', 'LoginAdminController@postLoginAdmin')->name('login.store');
@@ -60,6 +45,11 @@ Route::get('timkiem', 'WebsiteController@TimKiem')->name('timkiem');
 
 //BÌNH LUẬN
 Route::post('comment/{id}', 'CommentController@store')->name('comment');
+
+Route::get('baitap', function() {
+ $d = DB::table('users')->pluck('name');
+ echo $d;
+});
 
 
 

@@ -55,6 +55,26 @@
                             
                             <button id="nutlogin" type="submit" class="btn btn-outline-light rounded-0">REGISTER</button>
                         </form>
+                        
+                        <br>
+                        <div>
+                            <!-- DÙNG ĐỂ HIỂN THỊ LỖI -->
+                            @if(count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $err)
+                                    {{$err}}<br>
+                                @endforeach
+                            <div>
+                            @endif
+                            
+                            @if(session('thongbao'))
+                                <div class="alert alert-danger">
+                                        {{session('thongbao')}}
+                                </div>
+                            @endif
+                        <!-- HIỂN THỊ LỖI -->
+                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ class CategoriesTableSeeder extends Seeder
     {
         Category::create([
             'name'=> 'MOBILE',
-            'slug' => str_slug(''),
+            'slug' => str_slug('mobile'),
         ]);
     }
 }

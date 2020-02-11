@@ -48,7 +48,7 @@
                                 <a href="#">{{$posts['created_at']->toDateString()}} / {{$posts['created_at']->diffForHumans()}}</a>
                                 <a href="archive.html">inews</a>
                             </div>
-                            <h3 class="post-title"><b>{{ $posts->title }}</b></h3>
+                            <h2 class="post-title"><b>{{ $posts->title }}</b></h2>
 
                             <div class="post-meta-2">
                                 <!-- <span class="mr-30"><i class="fa fa-eye" aria-hidden="true"></i> {{ $posts->views }}</span>

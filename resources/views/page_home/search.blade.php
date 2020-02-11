@@ -66,9 +66,8 @@
                                 <a href="{{ route('xembaiviet', $tin->slug) }}" class="post-title">{{ $tin->title }}</a>
                                 <!-- Post Meta -->
                                 <div class="post-meta-2">
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                    <a href="#"><i class="fa fa-eye mr-1" aria-hidden="true"></i> {{ $tin->views }}</a>
+                                    <a href="#"><i class="fas fa-thumbs-up  mr-1"></i> {{ $tin->likes }}</a>
                                 </div>
                                 <p>{{ $tin->description}}</p>
                             </div>

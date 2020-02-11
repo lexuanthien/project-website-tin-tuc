@@ -27,7 +27,7 @@
 
     @include('page_home.layout.menu')
 
-    <section class=" d-flex flex-wrap">
+    <section class="mag-posts-area d-flex flex-wrap">
         <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
             <!-- Sidebar Widget -->
             <div class="single-sidebar-widget p-30">
@@ -85,7 +85,7 @@
             <div class="single-sidebar-widget p-30">
                 <!-- Section Title -->
                 <div class="section-heading">
-                    <h5>CÔNG NGHỆ</h5>
+                <a href=""><h5>CÔNG NGHỆ</h5></a>
                 </div>
 
                 <!-- Single Blog Post -->
@@ -111,7 +111,7 @@
 
         <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
             <!-- Trending Now Posts Area -->
-            <div class="mb-30">
+            <div class="trending-now-posts mb-30">
                 <!-- Section Title -->
                 <div class="section-heading">
                     <h5>TRENDING NOW</h5>
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="carousel-caption text-left">
                                     <a href="{{ route('xembaiviet', $tin->slug) }}" id= "titlecarousel">{{ $tin['title'] }}</a>
-                                    <a id="reading" class="btn btn-outline-light rounded-0 mt-3" href="{{ route('xembaiviet', $tin->slug) }}"  role="button">CONTINUE READING</a>
+                                    <a id="reading" class=" btn btn-outline-light rounded-0 mt-3" href="{{ route('xembaiviet', $tin->slug) }}"  role="button">CONTINUE READING</a>
                                     
                                 </div>
                             </div>
@@ -169,11 +169,11 @@
                 </div>
             </div>
 
-            <div class="feature-video-posts mb-30 mt-30">
-                <!-- Section Title -->
+            <div class="feature-video-posts mb-30">
+                
                 @foreach($categories->take(3) as $category)
                 <div class="section-heading">
-                    <h5>{{ $category->name }}</h5>
+                <a href="{{ route('news', $category->slug) }}"><h5>{{ $category->name }}</h5><a>
                 </div>
 
                 <div class="featured-video-posts mb-4">
@@ -222,7 +222,7 @@
                                            
                                         </div>
                                         <div class="post-content">
-                                            <a href="{{ route('xembaiviet', $tin->slug) }}" class="post-cate">{{$tin['title']}}</a>
+                                            <a href="{{ route('xembaiviet', $tin->slug) }}" class="post-title">{{$tin['title']}}</a>
                                         </div>
                                     </div>
 

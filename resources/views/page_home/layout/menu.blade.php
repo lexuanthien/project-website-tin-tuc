@@ -101,9 +101,6 @@
               <nav class="navbar navbar-expand-sm navbar-dark justify-content-end">
                 <ul id="listNavbar3" class="navbar-nav">
                         <li class="nav-item">
-                        <a class="nav-link">{{ $time->toDateString() }}</a>
-                        </li>
-                        <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i><a>
                         </li>
                         <li class="nav-item">

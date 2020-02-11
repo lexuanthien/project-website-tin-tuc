@@ -18,12 +18,13 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->longText('content');
-            $table->unsignedInteger('category_id')->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedInteger('category_id')->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('tin_hot');
             $table->mediumText('image')->nullable();
             $table->string('slug')->unique();
             $table->integer('likes')->default(0)->comment("số lượt yêu thích");
             $table->integer('views')->default(0)->comment("số lượt xem");
+            $table->softDeletes();
             $table->timestamps();
             
         });
